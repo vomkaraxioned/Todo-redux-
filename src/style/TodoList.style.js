@@ -11,3 +11,5 @@ const TodoList = styled.ul`
     &:hover { transform:scale(.5) }
   }
 `;
+
+export default TodoList;
