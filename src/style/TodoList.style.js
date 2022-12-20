@@ -8,7 +8,7 @@ const TodoList = styled.ul`
     border-radius:10px;
 
 
-    &:hover { transform:scale(.5) }
+    &:hover { transform:scale(.9) }
   }
 `;
 

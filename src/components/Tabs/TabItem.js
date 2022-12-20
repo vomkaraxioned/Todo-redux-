@@ -1,3 +1,3 @@
-const TabItem = ({name})=><li>{name}</li>;
+const TabItem = ({name})=><li data-status={name}>{name}</li>;
 
 export default TabItem;

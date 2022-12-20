@@ -1,7 +1,9 @@
-const TodoItem = ({toDo}) => {
+const TodoItem = ({toDo,status}) => {
+
   return (
    <li>
-     <textarea  rows="10" value={toDo}></textarea>
+     {status=="completed"?<span>done</span>:null}
+     <textarea  rows="10" value={toDo} disabled></textarea>
      <div className="controls">
        <button className="controls__edit">edit</button>
        <button className="controls__complete">complete</button>
