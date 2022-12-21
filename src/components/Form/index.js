@@ -15,7 +15,7 @@ const Form = ({formDetails,inputs,submitHandler}) => {
     <FormStyle>
       <form action={formDetails.action} name={formDetails.name} onSubmit={eventPreventer}>
         {
-          inputs.map(({ type, name, styleName,basis, placeholder }) => <Input type={type} name={name} styleName={styleName} basis={basis} placeholder={placeholder} key={name} handler={setText}/>)
+          inputs.map(({ type, name, styleName,basis, placeholder },i) => <Input type={type} name={name} styleName={styleName} basis={basis} placeholder={placeholder} key={name} handler={setText}/>)
         }
       </form>
     </FormStyle>

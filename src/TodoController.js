@@ -12,8 +12,14 @@ class TodoController {
   }
 
   addData(data) {
-    this.todoArr.push({task:data,status:"active"});
+    this.todoArr.push({id:Math.round((Math.random()*100))+data.slice(0,4),task:data,status:"active"});
     localStorage.setItem("todo", JSON.stringify(this.todoArr));
+  }
+
+  removeData(id) {
+    this.todoArr.map((todo,i)=>{
+      console.log(todo.id,id)
+    });
   }
 }
 

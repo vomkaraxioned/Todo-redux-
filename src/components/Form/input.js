@@ -1,7 +1,7 @@
 import InputContainer from "../../style/InputContainer.style";
 import { useRef } from "react";
 
-const Input = ({ type, name, styleName, basis, placeholder,handler }) => {
+const Input = ({ type, name, styleName, basis, placeholder,handler,index }) => {
   const reference = useRef();
   return (
     <InputContainer basis={basis}>
