@@ -5,11 +5,14 @@ const todoReducer = (todoList = [], action) => {
   switch (action.type) {
     case "add": controller.addData(action.todo);
       break;
-      case "remove":controller.removeAndComplete(action.id,action.to_remove);
+    case "remove": controller.removeSaveAndComplete(action.id, action.to_remove);
       break;
-      case "edit":console.log("edit");
+    case "edit": action.element.disabled = false;
       break;
-      case"complete":controller.removeAndComplete(action.id,action.to_remove);
+    case "save": action.element.disabled = true;
+      controller.removeSaveAndComplete(action.details.id, action.to_remove, action.element.value);
+      break;
+    case "complete": controller.removeSaveAndComplete(action.id, action.to_remove);
       break;
     default: todoList = todoList;
   }

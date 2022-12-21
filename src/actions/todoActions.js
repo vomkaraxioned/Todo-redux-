@@ -1,18 +1,20 @@
 const add = (data, i) => { return { type: "add", todo: data } };
 
-const remove = (e) => {
-  const id = e.target.parentElement.parentElement.dataset.id;
-  return { type: "remove", id: id, to_remove: 1 };
+const remove = (details) => {
+  return { type: "remove", id: details.id, to_remove: 1 };
 };
 
-const complete = (e) => {
-  const id = e.target.parentElement.parentElement.dataset.id;
-  return { type: "complete", id: id, to_remove: 0 };
+const complete = (details) => {
+  return { type: "complete", id: details.id, to_remove: 0 };
 };
 
-const edit = (e) => {
-  return { type: "edit" };
+const edit = (textarea) => {
+  return { type: "edit", element: textarea };
 };
+
+const saveEdited = (details, textarea) => {
+  return { type: "save", element: textarea, to_remove: 0, details: details };
+}
 
 export default add;
-export { remove, complete, edit };
+export { remove, complete, edit, saveEdited };

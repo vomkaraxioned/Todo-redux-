@@ -7,6 +7,8 @@ class TodoController {
 
   setData(data) {
     localStorage.setItem("todo", JSON.stringify(data));
+    const updatedArr = localStorage.getItem("todo");
+    return updatedArr;
   }
 
   addData(data) {
@@ -14,10 +16,10 @@ class TodoController {
     localStorage.setItem("todo", JSON.stringify(this.todoArr));
   }
 
-  removeAndComplete(id,to_remove) {
+  removeSaveAndComplete(id, to_remove, editedValue) {
     this.todoArr.map((todo, i) => {
       if (todo.id == id) {
-        to_remove?this.todoArr.splice(i, 1): todo.status = "completed";
+        editedValue ? todo.task = editedValue : to_remove ? this.todoArr.splice(i, 1) : todo.status = "completed";
       }
     });
     this.setData(this.todoArr);

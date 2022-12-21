@@ -6,7 +6,7 @@ import Form from "./components/Form/index";
 import Tabs from "./components/Tabs/index";
 import Todo from "./components/Todo/index";
 import { useSelector, useDispatch } from "react-redux";
-import add, { edit, remove, complete } from "./actions/todoActions";
+import add, { edit, remove, complete,saveEdited } from "./actions/todoActions";
 
 const App = () => {
 
@@ -14,7 +14,7 @@ const App = () => {
     todoList = useSelector((state => state.todoReducer)),
     dispatch = useDispatch(),
     [tabFilter, setTabFilter] = useState("active"),
-    controlsHandler = { dispatch, edit, remove, complete };
+    controlsHandler = { dispatch, edit, remove, complete,saveEdited };
 
   return (
     <Container bgColor={container.bgColor}>
