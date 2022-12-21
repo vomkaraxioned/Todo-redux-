@@ -20,7 +20,7 @@ const TodoItem = ({ id, toDo, status, controlsHandler }) => {
 
         <button className = "controls__edit" onClick = {() => controlsHandler.dispatch(controlsHandler.edit(textareaRef.current))}>edit</button>
 
-        <button className = "controls__complete" onClick = {() => controlsHandler.dispatch(controlsHandler.complete(details))}>complete</button>
+        {status !== "completed" ?<button className = "controls__complete" onClick = {() => controlsHandler.dispatch(controlsHandler.complete(details))}>complete</button>:null}
 
         <button className = "controls__delete" onClick = {() => controlsHandler.dispatch(controlsHandler.remove(details))}>delete</button>
 

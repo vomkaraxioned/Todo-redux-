@@ -15,7 +15,7 @@ const TabsStyle = styled.ul`
 
     &:last-child { margin-right:0}
 
-    &:hover { transform:scale(1.1) }
+    &:hover,active { transform:scale(1.1) }
   }
 `;
 

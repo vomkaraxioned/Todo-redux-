@@ -13,16 +13,6 @@ const Heading = styled.h1`
   &:hover {
     transform:scale(1.2)
   }
-
-  &::before {
-    width:20px;
-    height:20px;
-    background:#f00;
-    display:block;
-    font-family:'FontAwesome';
-    font-weight:900;
-    constent:'\2b';
-  }
 `;
 
 export default Heading ;
