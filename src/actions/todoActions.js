@@ -1,13 +1,13 @@
 const add = (data, i) => { return { type: "add", todo: data } };
 
 const remove = (e) => {
-  const [id,status] = e.target.parentElement.parentElement.dataset.details;
-  return { type: "remove",id:id };
+  const id = e.target.parentElement.parentElement.dataset.id;
+  return { type: "remove", id: id, to_remove: 1 };
 };
 
 const complete = (e) => {
-
-  return { type: "complete" };
+  const id = e.target.parentElement.parentElement.dataset.id;
+  return { type: "complete", id: id, to_remove: 0 };
 };
 
 const edit = (e) => {

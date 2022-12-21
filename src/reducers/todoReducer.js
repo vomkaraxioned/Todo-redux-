@@ -5,11 +5,11 @@ const todoReducer = (todoList = [], action) => {
   switch (action.type) {
     case "add": controller.addData(action.todo);
       break;
-      case "remove":controller.removeData(action.id);
+      case "remove":controller.removeAndComplete(action.id,action.to_remove);
       break;
       case "edit":console.log("edit");
       break;
-      case"complete":console.log("complete");
+      case"complete":controller.removeAndComplete(action.id,action.to_remove);
       break;
     default: todoList = todoList;
   }

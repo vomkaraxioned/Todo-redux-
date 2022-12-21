@@ -1,7 +1,7 @@
 const TodoItem = ({ id, toDo, status, controlsHandler }) => {
 
   return (
-    <li data-details = {[id,status]}>
+    <li data-id = {id} data-status = {status} >
       {status == "completed" ? <span>done</span> : null}
       <textarea rows="10" value={toDo} disabled></textarea>
       <div className="controls">
