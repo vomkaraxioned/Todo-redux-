@@ -10,15 +10,19 @@ const InputContainer = styled.div`
 
     &[type=text],&[type=email] {
       padding:7px 2%;
-      margin-right:5%;
+      border-radius:5px;
+      margin-right:3%;
 
       &:focus { outline:2px solid #271c6c; }
     }
 
     &[type=submit] {
-      padding:10px;
+      width:50px;
+      height:50px;
       border-radius:50%;
       background:#271c6c;
+      text-indent:-9999px;
+      display:block;
     }
   }
 `;

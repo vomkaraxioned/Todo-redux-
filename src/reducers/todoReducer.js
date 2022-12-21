@@ -3,7 +3,7 @@ import TodoController from "../TodoController";
 const todoReducer = (todoList = [], action) => {
   const controller = new TodoController();
   switch (action.type) {
-    case "add": controller.addData(action.todo);
+    case "add": action.todo ? controller.addData(action.todo) : alert("Empty input not allowed!");
       break;
     case "remove": controller.removeSaveAndComplete(action.id, action.to_remove);
       break;
