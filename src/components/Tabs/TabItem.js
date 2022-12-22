@@ -1,11 +1,9 @@
 const TabItem = ({ name, tabFilterHandler }) => {
-  const setTab = (e)=>{
-    // const ul = e.target.parentElement;
-    // console.log(ul)
+  const setTab = (e) => {
     tabFilterHandler(e.target.dataset.status)
   };
 
-  return(
+  return (
     <li data-status={name} onClick={(e) => setTab(e)}>{name}</li>
   )
 };
